@@ -1,16 +1,16 @@
-import { Zap, Github, Linkedin, Twitter, Instagram } from 'lucide-react'
-import { FOOTER_COLUMNS, SOCIAL_LINKS } from '@/lib/constants'
-import { cn } from '@/lib/utils'
+import { Zap, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { FOOTER_COLUMNS, SOCIAL_LINKS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   Github,
   Linkedin,
   Twitter,
   Instagram,
-}
+};
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="relative border-t border-white/5" role="contentinfo">
@@ -26,17 +26,17 @@ export function Footer() {
                 <Zap className="w-4 h-4 text-navy-950" strokeWidth={2.5} />
               </div>
               <span className="font-heading font-bold text-white text-xl">
-                Dev<span className="text-cyan-400">Agency</span>
+                G2<span className="text-cyan-400">Studio</span>
               </span>
             </a>
             <p className="text-steel-400 text-sm leading-relaxed max-w-xs">
-              Construimos el software que tu negocio necesita. Del concepto al deploy,
-              con código limpio y diseño premium.
+              Construimos el software que tu negocio necesita. Del concepto al
+              deploy, con código limpio y diseño premium.
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3 pt-1">
               {SOCIAL_LINKS.map((social) => {
-                const Icon = ICON_MAP[social.icon]
+                const Icon = ICON_MAP[social.icon];
                 return Icon ? (
                   <a
                     key={social.label}
@@ -45,15 +45,15 @@ export function Footer() {
                     rel="noopener noreferrer"
                     aria-label={social.label}
                     className={cn(
-                      'w-9 h-9 rounded-lg border border-white/10 bg-white/5',
-                      'flex items-center justify-center text-steel-400',
-                      'hover:text-cyan-400 hover:border-cyan-400/30 hover:shadow-glow-sm',
-                      'transition-all duration-200'
+                      "w-9 h-9 rounded-lg border border-white/10 bg-white/5",
+                      "flex items-center justify-center text-steel-400",
+                      "hover:text-cyan-400 hover:border-cyan-400/30 hover:shadow-glow-sm",
+                      "transition-all duration-200",
                     )}
                   >
                     <Icon className="w-4 h-4" />
                   </a>
-                ) : null
+                ) : null;
               })}
             </div>
           </div>
@@ -86,16 +86,22 @@ export function Footer() {
             © {currentYear} DevAgency. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-steel-500 hover:text-white text-xs transition-colors">
+            <a
+              href="#"
+              className="text-steel-500 hover:text-white text-xs transition-colors"
+            >
               Política de Privacidad
             </a>
             <span className="text-white/10">·</span>
-            <a href="#" className="text-steel-500 hover:text-white text-xs transition-colors">
+            <a
+              href="#"
+              className="text-steel-500 hover:text-white text-xs transition-colors"
+            >
               Términos
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
