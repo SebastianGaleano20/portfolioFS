@@ -1,45 +1,53 @@
-'use client'
+"use client";
 
-import { ArrowUpRight } from 'lucide-react'
-import { Badge } from '@/components/ui/Badge'
-import { SectionTitle, GradientText } from '@/components/ui/AnimatedText'
-import { useInView } from '@/lib/hooks/useInView'
-import { PROJECTS } from '@/lib/constants'
-import { cn } from '@/lib/utils'
+import { ArrowUpRight } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { SectionTitle, GradientText } from "@/components/ui/AnimatedText";
+import { useInView } from "@/lib/hooks/useInView";
+import { PROJECTS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 function ProjectCard({
   project,
   index,
   isVisible,
 }: {
-  project: (typeof PROJECTS)[0]
-  index: number
-  isVisible: boolean
+  project: (typeof PROJECTS)[0];
+  index: number;
+  isVisible: boolean;
 }) {
   return (
     <article
       className={cn(
-        'group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden',
-        'hover:border-cyan-400/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)]',
-        'transition-all duration-500 cursor-pointer',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        "group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden",
+        "hover:border-cyan-400/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)]",
+        "transition-all duration-500 cursor-pointer",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
       )}
       style={{ transitionDelay: `${index * 120}ms` } as React.CSSProperties}
     >
       {/* Image / gradient placeholder */}
-      <div className={cn('relative h-48 overflow-hidden bg-gradient-to-br', project.gradient)}>
+      <div
+        className={cn(
+          "relative h-48 overflow-hidden bg-gradient-to-br",
+          project.gradient,
+        )}
+      >
         {/* Grid pattern overlay */}
         <div
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '30px 30px',
+            backgroundSize: "30px 30px",
           }}
         />
         {/* Hover reveal overlay */}
         <div className="absolute inset-0 bg-navy-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span className="flex items-center gap-2 text-white font-medium text-sm bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
-            Ver proyecto <ArrowUpRight className="w-4 h-4" />
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              Ver proyecto
+            </a>
+            <ArrowUpRight className="w-4 h-4" />
           </span>
         </div>
         {/* Category badge */}
@@ -53,7 +61,9 @@ function ProjectCard({
         <h3 className="font-heading font-bold text-white text-lg group-hover:text-cyan-300 transition-colors duration-200">
           {project.title}
         </h3>
-        <p className="text-steel-400 text-sm leading-relaxed">{project.description}</p>
+        <p className="text-steel-400 text-sm leading-relaxed">
+          {project.description}
+        </p>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 pt-2">
@@ -72,11 +82,11 @@ function ProjectCard({
         </div>
       </div>
     </article>
-  )
+  );
 }
 
 export function Projects() {
-  const { ref, isInView } = useInView<HTMLElement>({ threshold: 0.05 })
+  const { ref, isInView } = useInView<HTMLElement>({ threshold: 0.05 });
 
   return (
     <section
@@ -86,7 +96,10 @@ export function Projects() {
       aria-label="Proyectos destacados"
     >
       {/* BG accent */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        aria-hidden
+      >
         <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/3 blur-[120px] rounded-full" />
       </div>
 
@@ -102,8 +115,8 @@ export function Projects() {
           }
           description="Cada proyecto es una solución única construida con atención al detalle, performance y experiencia de usuario excepcional."
           className={cn(
-            'mb-16 transition-all duration-700',
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            "mb-16 transition-all duration-700",
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
           )}
         />
 
@@ -119,5 +132,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
