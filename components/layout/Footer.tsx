@@ -22,14 +22,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="#home" className="flex items-center w-fit">
+            <a href="#home" className="flex items-center gap-3 w-fit">
               <Image
                 src="/assets/g2logo.jpeg"
                 alt="G2Studio logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto object-contain"
+                width={52}
+                height={52}
+                className="h-13 w-auto object-contain"
               />
+              <span className="font-heading font-bold text-white text-xl">
+                G2<span className="text-cyan-400">Studio</span>
+              </span>
             </a>
             <p className="text-steel-400 text-sm leading-relaxed max-w-xs">
               Construimos el software que tu negocio necesita. Del concepto al

@@ -36,17 +36,20 @@ export function Header() {
               e.preventDefault();
               handleNavClick("#home");
             }}
-            className="flex items-center group"
+            className="flex items-center gap-3 group"
             aria-label="G2Studio - Ir al inicio"
           >
             <Image
               src="/assets/g2logo.jpeg"
               alt="G2Studio logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain"
+              width={52}
+              height={52}
+              className="h-13 w-auto object-contain"
               priority
             />
+            <span className="font-heading font-bold text-white text-xl tracking-tight">
+              G2<span className="text-cyan-400">Studio</span>
+            </span>
           </a>
 
           {/* Desktop Nav */}
