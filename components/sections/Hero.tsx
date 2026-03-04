@@ -191,27 +191,6 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Trust indicators */}
-            <div
-              className="flex items-center gap-6 pt-2 opacity-0 animate-fade-in"
-              style={{
-                animationDelay: "1100ms",
-                animationFillMode: "forwards",
-              }}
-            >
-              {[
-                ["50+", "Proyectos"],
-                ["3+", "Años"],
-                ["30+", "Clientes"],
-              ].map(([val, lbl]) => (
-                <div key={lbl} className="text-center">
-                  <div className="font-heading font-bold text-white text-xl">
-                    {val}
-                  </div>
-                  <div className="text-steel-500 text-xs">{lbl}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right: code snippet */}
