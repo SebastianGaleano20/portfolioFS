@@ -136,10 +136,10 @@ export function Hero() {
             <h1 className="font-heading text-display-xl font-bold text-white leading-[1.05]">
               <AnimatedText delay={200}>Construimos el </AnimatedText>
               <br />
-              <AnimatedText delay={350}>
+              <AnimatedText delay={350} className="mr-2">
                 <GradientText>software</GradientText>
               </AnimatedText>
-              <AnimatedText delay={350}> que tu</AnimatedText>
+              <AnimatedText delay={350}>que tu</AnimatedText>
               <br />
               <AnimatedText delay={500}>negocio </AnimatedText>
               <GradientText>
@@ -159,12 +159,12 @@ export function Hero() {
 
             {/* CTAs */}
             <div
-              className="flex flex-wrap gap-4 opacity-0 animate-slide-up"
+              className="flex gap-4 opacity-0 animate-slide-up"
               style={{ animationDelay: "900ms", animationFillMode: "forwards" }}
             >
               <Button
                 variant="primary"
-                size="lg"
+                size="sm"
                 href="#servicios"
                 onClick={(e) => {
                   e.preventDefault();
@@ -174,11 +174,11 @@ export function Hero() {
                 }}
               >
                 Ver Servicios
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Button>
               <Button
                 variant="ghost"
-                size="lg"
+                size="sm"
                 href="#proyectos"
                 onClick={(e) => {
                   e.preventDefault();

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { SectionTitle, GradientText } from "@/components/ui/AnimatedText";
 import { useInView } from "@/lib/hooks/useInView";
@@ -33,14 +34,24 @@ function ProjectCard({
           project.gradient,
         )}
       >
+        {project.image && (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+          />
+        )}
         {/* Grid pattern overlay */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "30px 30px",
-          }}
-        />
+        {!project.image && (
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+              backgroundSize: "30px 30px",
+            }}
+          />
+        )}
         {/* Hover reveal overlay */}
         <div className="absolute inset-0 bg-navy-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span className="flex items-center gap-2 text-white font-medium text-sm bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
