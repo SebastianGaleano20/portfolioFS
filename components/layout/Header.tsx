@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { NAV_LINKS } from "@/lib/constants";
 import { useScrolled } from "@/lib/hooks/useScrolled";
@@ -35,15 +36,17 @@ export function Header() {
               e.preventDefault();
               handleNavClick("#home");
             }}
-            className="flex items-center gap-2.5 group"
-            aria-label="DevAgency - Ir al inicio"
+            className="flex items-center group"
+            aria-label="G2Studio - Ir al inicio"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300">
-              <Zap className="w-4 h-4 text-navy-950" strokeWidth={2.5} />
-            </div>
-            <span className="font-heading font-bold text-white text-xl tracking-tight">
-              G2<span className="text-cyan-400">Studio</span>
-            </span>
+            <Image
+              src="/assets/g2logo.jpeg"
+              alt="G2Studio logo"
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop Nav */}

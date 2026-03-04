@@ -1,4 +1,5 @@
-import { Zap, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import Image from "next/image";
 import { FOOTER_COLUMNS, SOCIAL_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -21,13 +22,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="#home" className="flex items-center gap-2.5 group w-fit">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-glow-sm">
-                <Zap className="w-4 h-4 text-navy-950" strokeWidth={2.5} />
-              </div>
-              <span className="font-heading font-bold text-white text-xl">
-                G2<span className="text-cyan-400">Studio</span>
-              </span>
+            <a href="#home" className="flex items-center w-fit">
+              <Image
+                src="/assets/g2logo.jpeg"
+                alt="G2Studio logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+              />
             </a>
             <p className="text-steel-400 text-sm leading-relaxed max-w-xs">
               Construimos el software que tu negocio necesita. Del concepto al

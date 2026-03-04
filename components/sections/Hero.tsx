@@ -136,9 +136,9 @@ export function Hero() {
             <h1 className="font-heading text-display-xl font-bold text-white leading-[1.05]">
               <AnimatedText delay={200}>Construimos el </AnimatedText>
               <br />
-              <GradientText>
-                <AnimatedText delay={350}>software</AnimatedText>
-              </GradientText>
+              <AnimatedText delay={350}>
+                <GradientText>software</GradientText>
+              </AnimatedText>
               <AnimatedText delay={350}> que tu</AnimatedText>
               <br />
               <AnimatedText delay={500}>negocio </AnimatedText>
