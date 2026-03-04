@@ -14,7 +14,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/5" role="contentinfo">
+    <footer className="relative border-t border-white/5 bg-navy-950" role="contentinfo">
       {/* Cyan top line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
 
