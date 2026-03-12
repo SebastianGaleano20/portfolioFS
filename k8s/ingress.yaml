@@ -5,6 +5,7 @@ metadata:
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: traefik
   rules:
@@ -19,5 +20,6 @@ spec:
                 port:
                   number: 80
   tls:
-    - hosts:
+    - secretName: portfolio-fs-tls
+      hosts:
         - portfolio-fs.example.com
