@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: portfolio-fs.example.com
+    - host: g2studio.it.com
       http:
         paths:
           - path: /
@@ -22,4 +22,4 @@ spec:
   tls:
     - secretName: portfolio-fs-tls
       hosts:
-        - portfolio-fs.example.com
+        - g2studio.it.com
