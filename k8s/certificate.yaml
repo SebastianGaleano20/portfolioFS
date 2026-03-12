@@ -1,19 +1,4 @@
 apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
-  name: letsencrypt-prod
-spec:
-  acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    email: your-email@example.com
-    privateKeySecretRef:
-      name: letsencrypt-prod
-    solvers:
-      - http01:
-          ingress:
-            ingressClassName: traefik
----
-apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: portfolio-fs-tls
@@ -23,4 +8,4 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-    - portfolio-fs.example.com
+    - g2studio.it.com
