@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-fs
+  labels:
+    app: portfolio-fs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: portfolio-fs
+  template:
+    metadata:
+      labels:
+        app: portfolio-fs
+    spec:
+      containers:
+        - name: portfolio-fs
+          image: coddyshelby/g2studio:portfolio-v1.0.0
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
