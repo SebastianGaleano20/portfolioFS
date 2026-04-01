@@ -128,7 +128,7 @@ export const SERVICES: Service[] = [
 export const PROJECTS: Project[] = [
   {
     id: "barberweb",
-    title: "Barrio Fino Barbería",
+    title: "Barrio Fino Barbería web - App Full Stack",
     description:
       "Plataforma de gestión para barbería con reservas online, panel de administración y dashboard de métricas. Código limpio y diseño moderno.",
     technologies: ["Next.js", "TypeScript", "TailwindCSS", "Vercel"],
@@ -150,7 +150,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "amyrose bakery",
-    title: "AmyRose Bakery - E-commerce",
+    title: "AmyRose Bakery - E-commerce Full Stack",
     description:
       "Tienda online para pastelería con catálogo de productos, carrito de compras y pasarela de pago integrada. Diseño dulce y experiencia de compra fluida.",
     technologies: [
