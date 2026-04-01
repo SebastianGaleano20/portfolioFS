@@ -1,11 +1,4 @@
-import type {
-  NavLink,
-  Service,
-  Project,
-  Stat,
-  SocialLink,
-  FooterColumn,
-} from "@/types";
+import type { NavLink, Service, Project, Stat, FooterColumn } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "#home" },
@@ -177,11 +170,11 @@ export const STATS: Stat[] = [
   { value: 98, suffix: "%", label: "tasa de satisfacción" },
 ];
 
-export const SOCIAL_LINKS: SocialLink[] = [
+/*export const SOCIAL_LINKS: SocialLink[] = [
   { label: "GitHub", href: "https://github.com", icon: "Github" },
   { label: "Instagram", href: "https://instagram.com", icon: "Instagram" },
 ];
-
+*/
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Servicios",

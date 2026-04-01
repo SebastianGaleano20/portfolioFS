@@ -1,20 +1,24 @@
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+// import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
-import { FOOTER_COLUMNS, SOCIAL_LINKS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { FOOTER_COLUMNS } from "@/lib/constants";
+// import { cn } from "@/lib/utils";
 
+/*
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   Github,
   Linkedin,
   Twitter,
   Instagram,
 };
-
+*/
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/5 bg-navy-950" role="contentinfo">
+    <footer
+      className="relative border-t border-white/5 bg-navy-950"
+      role="contentinfo"
+    >
       {/* Cyan top line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
 
@@ -38,7 +42,7 @@ export function Footer() {
               Construimos el software que tu negocio necesita. Del concepto al
               deploy, con código limpio y diseño premium.
             </p>
-            {/* Social links */}
+            {/* Social links 
             <div className="flex items-center gap-3 pt-1">
               {SOCIAL_LINKS.map((social) => {
                 const Icon = ICON_MAP[social.icon];
@@ -61,6 +65,7 @@ export function Footer() {
                 ) : null;
               })}
             </div>
+            */}
           </div>
 
           {/* Link columns */}
