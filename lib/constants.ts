@@ -148,6 +148,26 @@ export const PROJECTS: Project[] = [
     image: "/projects/portfolio.png",
     link: "https://sebastiang.netlify.app/",
   },
+  {
+    id: "amyrose bakery",
+    title: "AmyRose Bakery - E-commerce",
+    description:
+      "Tienda online para pastelería con catálogo de productos, carrito de compras y pasarela de pago integrada. Diseño dulce y experiencia de compra fluida.",
+    technologies: [
+      "NestJs",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Next.js",
+      "TailwindCSS",
+      "React",
+      "Vercel",
+    ],
+    gradient: "from-violet-500/20 to-purple-600/20",
+    category: "E-commerce",
+    image: "/projects/amyrose.png",
+    link: "https://amyrose.app/",
+  },
 ];
 
 export const STATS: Stat[] = [
@@ -159,8 +179,6 @@ export const STATS: Stat[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: "GitHub", href: "https://github.com", icon: "Github" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "Linkedin" },
-  { label: "Twitter", href: "https://twitter.com", icon: "Twitter" },
   { label: "Instagram", href: "https://instagram.com", icon: "Instagram" },
 ];
 
