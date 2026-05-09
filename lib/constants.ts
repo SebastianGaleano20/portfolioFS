@@ -138,15 +138,15 @@ export const PROJECTS: Project[] = [
     image: "/projects/barber.png",
   },
   {
-    id: "portfolio web",
-    title: "Portfolio web - Landing Page",
+    id: "amyrose",
+    title: "AmyRose - E-commerce Full Stack",
     description:
-      "Landing page de portfolio personal con diseño minimalista, animaciones sutiles y optimización SEO. Muestra proyectos, servicios y contacto de forma clara y atractiva.",
-    technologies: ["Next.js", "TailwindCSS", "React", "Vercel"],
+      "E-commerce de repostería artesanal con catálogo de productos, carrito de compras, integración con MercadoPago y panel de administración.",
+    technologies: ["Next.js", "TailwindCSS", "React", "Vercel", "NestJS", "MercadoPago", "TypeScript", "Prisma"],
     gradient: "from-violet-500/20 to-purple-600/20",
-    category: "Landing Page",
-    image: "/projects/portfolio.png",
-    link: "https://sebastiang.netlify.app/",
+    category: "E-commerce",
+    image: "/projects/amyrose.png",
+    link: "https://amyrose.g2studio.it.com/es",
   },
 ];
 

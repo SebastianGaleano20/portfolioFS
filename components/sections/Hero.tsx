@@ -142,9 +142,9 @@ export function Hero() {
               <AnimatedText delay={350}>que tu</AnimatedText>
               <br />
               <AnimatedText delay={500}>negocio </AnimatedText>
-              <GradientText>
-                <AnimatedText delay={650}>necesita</AnimatedText>
-              </GradientText>
+              <AnimatedText delay={650}>
+                <GradientText>necesita</GradientText>
+              </AnimatedText>
             </h1>
 
             {/* Sub */}
