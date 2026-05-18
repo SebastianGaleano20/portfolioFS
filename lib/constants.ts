@@ -158,8 +158,43 @@ export const PROJECTS: Project[] = [
     ],
     gradient: "from-violet-500/20 to-purple-600/20",
     category: "E-commerce",
-    image: "/projects/amyrose.png",
+    image: "/projects/amyrose/amyrose.png",
     link: "https://amyrose.app/",
+  },
+  {
+    id: "tynna-burgas",
+    title: "Tynna Burgas - Landing Page",
+    description:
+      "Landing page gastronómica con identidad visual sólida, menú interactivo y experiencia de usuario optimizada para convertir visitas en reservas.",
+    technologies: ["Next.js", "TailwindCSS", "React", "Vercel"],
+    gradient: "from-amber-500/20 to-orange-600/20",
+    category: "Landing Page",
+    image: "/projects/tynnaburgas/tb0.png",
+    link: "https://tynnas-burgas.g2studio.it.com/",
+    modalImages: [
+      "/projects/tynnaburgas/tb0.png",
+      "/projects/tynnaburgas/tb1.png",
+      "/projects/tynnaburgas/tb2.png",
+      "/projects/tynnaburgas/tb3.png",
+    ],
+  },
+  {
+    id: "chulito-barbershop",
+    title: "Chulito Barbershop - Landing Page",
+    description:
+      "Sitio web para barbería premium con galería de servicios, sistema de turnos y diseño urbano que refleja la identidad de la marca.",
+    technologies: ["Next.js", "TailwindCSS", "React", "Vercel"],
+    gradient: "from-slate-500/20 to-zinc-600/20",
+    category: "Landing Page",
+    image: "/projects/chulobarber/chl0.png",
+    link: "https://chulobarbershop.g2studio.it.com/",
+    modalImages: [
+      "/projects/chulobarber/chl0.png",
+      "/projects/chulobarber/chl1.png",
+      "/projects/chulobarber/chl2.png",
+      "/projects/chulobarber/chl3.png",
+      "/projects/chulobarber/chl4.png",
+    ],
   },
 ];
 

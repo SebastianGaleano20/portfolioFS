@@ -21,6 +21,7 @@ export interface Project {
   category: string;
   link?: string;
   image?: string;
+  modalImages?: string[];
 }
 
 export interface TeamMember {
